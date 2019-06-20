@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="jQuery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
     <style>
         .playground {
@@ -41,7 +43,23 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
+            var the_h1 = {
+                text: 'I am a heading'
+            }
+            var the_h1_object = $("<h1>",the_h1);
 
+            var the_p = {
+                text: 'This is an awesome paragraph'
+            }
+            var the_p_object = $("<p>",the_p);
+
+            var the_red_p = {
+                text: 'This has red text',
+                style: 'color:red'
+            }
+            var the_red_p_object = $("<p>",the_red_p);
+            $("div.playground_source").append(the_h1_object, the_p_object, the_red_p_object);
+            $("#playground1").append(the_h1_object,the_p_object,the_red_p_object);
             //playground 2 code
 
             //playground 3 code
