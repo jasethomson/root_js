@@ -4,7 +4,6 @@
     <script src="jQuery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-
     <style>
         .playground {
             margin: 2%;
@@ -73,17 +72,46 @@
             var new_div_2_object = $("<div>", new_div_2);
             $("#playground2").append(new_div_2_object);
             //third div
-            var the_div_3 = $("#my_awesome_div3").text();
             var new_div_3 = {
-                text: the_div_3,
+                text: 'Here is ',
                 class: 'awesome_class',
                 id: 'my_awesome_div3',
-                data: 'coolness: high'
+                "data-coolness": 'high'
             }
             var new_div_3_object = $("<div>", new_div_3);
+            var strong_div = $("<strong>");
+            strong_div.text('EVEN MORE ');
+            new_div_3_object.append(strong_div);
+            new_div_3_object.append("awesome div text");
             $("#playground2").append(new_div_3_object);
             //playground 3 code
-
+            //add ul
+            var the_ul = $("<ul>").addClass('neato');
+            $("#playground3").append(the_ul);
+            //add li#1
+            var li_1 = $("li:nth-child(1)").text();
+            var new_li_1 = $("<li>").text( li_1 );
+            $("#playground3 ul").append( new_li_1 );
+            //add li#2
+            var li_2 = $("li:nth-child(2)").text();
+            var new_li_2 = $("<li>").text(li_2);
+            $("#playground3 ul").append(new_li_2);
+            //add li#3
+            var li_3 = $("li:nth-child(3)").text();
+            var new_li_3 = $("<li>").text(li_3);
+            $("#playground3 ul").append(new_li_3);
+            //figure
+            var new_figure = $("<figure>").addClass("awesome_picture");
+            var new_img = $("<img>");
+            new_img.attr("src", "http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg");
+            var new_figcaption = $("<figcaption>").text("That's right, ");
+            var new_span = $("<span>");
+            new_span.addClass('bold_text');
+            new_span.text("you are");
+            new_figure.append(new_img);
+            new_figcaption.append(new_span);
+            new_figure.append(new_figcaption);
+            $("#playground3").append(new_figure);
         });
     </script>
 </head>
