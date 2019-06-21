@@ -56,8 +56,32 @@
             var new_red_p = $("<p>").text(the_red_p);
             new_red_p.css('color','red');
             $("#playground1").append(new_red_p);
-            //playground 2 code
 
+            //playground 2 code
+            //first div
+            var the_div_1 = $(".playground_source div:first-of-type").text();
+            var new_div_1 = $("<div>").text( the_div_1 );
+            new_div_1.addClass('awesome_class');
+            $("#playground2").append(new_div_1);
+            //second div
+            var the_div_2 = $("#my_awesome_div2").text();
+            var new_div_2 = {
+                text: the_div_2,
+                class: 'awesome_class',
+                id: 'my_awesome_div2'
+            }
+            var new_div_2_object = $("<div>", new_div_2);
+            $("#playground2").append(new_div_2_object);
+            //third div
+            var the_div_3 = $("#my_awesome_div3").text();
+            var new_div_3 = {
+                text: the_div_3,
+                class: 'awesome_class',
+                id: 'my_awesome_div3',
+                data: 'coolness: high'
+            }
+            var new_div_3_object = $("<div>", new_div_3);
+            $("#playground2").append(new_div_3_object);
             //playground 3 code
 
         });
