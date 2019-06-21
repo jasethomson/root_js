@@ -43,26 +43,23 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
-            var the_h1 = {
-                text: 'I am a heading'
-            }
-            var the_h1_object = $("<h1>",the_h1);
-
-            var the_p = {
-                text: 'This is an awesome paragraph'
-            }
-            var the_p_object = $("<p>",the_p);
-
-            var the_red_p = {
-                text: 'This has red text',
-                style: 'color:red'
-            }
-            var the_red_p_object = $("<p>",the_red_p);
-            $("div.playground_source").append(the_h1_object, the_p_object, the_red_p_object);
-            $("#playground1").append(the_h1_object,the_p_object,the_red_p_object);
+            //h1
+            var the_h1 = $(".playground_source h1").text();
+            var new_h1 = $("<h1>").text( the_h1 );
+            $("#playground1").append(new_h1);
+            //p
+            var the_p = $("p:first-of-type").text();
+            var new_p = $("<p>").text(the_p);
+            $("#playground1").append(new_p);
+            //red p
+            var the_red_p = $(".playground_source p + p").text();
+            var new_red_p = $("<p>").text(the_red_p);
+            new_red_p.css('color','red');
+            $("#playground1").append(new_red_p);
             //playground 2 code
 
             //playground 3 code
+
         });
     </script>
 </head>
