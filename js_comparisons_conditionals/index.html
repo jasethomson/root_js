@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS | Comparisons and Conditionals</title>
+    <script>
+    var mySmallNumber = 5;
+    var myString = "5";
+    var myBigNumber = 255;
+
+    var output1 = mySmallNumber == myString;
+    var output2 = mySmallNumber === myString;
+    var output3 = mySmallNumber < myBigNumber;
+    var output4 = mySmallNumber > myBigNumber;
+
+    console.log('output1: ', output1);
+    console.log('output2: ', output2);
+    console.log('output3: ', output3);
+    console.log('output4: ', output4);
+
+    var gameNumber = 64;
+    var userInput1 = 11;
+    var userInput2 = gameNumber;
+
+    if (userInput1 > gameNumber){
+      console.log("The number is too high");
+    }
+
+    if (userInput1 < gameNumber) {
+      console.log("The number is too low");
+    }
+
+    if (userInput1 < 1 || userInput1 > 100) {
+      console.log("The number is out of range");
+    }
+    else {
+      console.log("The number is in range");
+    }
+
+    if (userInput2 == gameNumber) {
+      console.log("The correct number has been guessed");
+    }
+    else {
+      console.log("Try again");
+    }
+
+    var date = new Date();
+    var dayOfWeek = date.getDay();
+    var message = '';
+
+    switch(dayOfWeek) {
+      case 0:
+        message = 'It is Sunday';
+        break;
+      case 1:
+        message = 'It is Monday';
+        break;
+      case 2:
+        message = 'It is Tuesday';
+        break;
+      case 3:
+        message = 'It is Wednesday'
+        break;
+      case 4:
+        message = 'It is Thursday'
+        break;
+      case 5:
+        message = 'It is Friday'
+        break;
+      case 6:
+        message = 'It is Saturday'
+        break;
+      default:
+        message = 'Unknown day of the week'
+        break;
+    }
+    console.log('message: ',message)
+    </script>
+  </head>
+  <body>
+
+  </body>
+  </html>
